@@ -29,7 +29,7 @@ The full scan is in [`docs/robodog-design-notebook.pdf`](docs/robodog-design-not
 |---|---|---|
 | 70 kg-cm servos, 180° | 2 | 8.4 V straight from the battery |
 | 35 kg-cm servos, 180° | 6 | 6 V from a 600 W DC-DC converter (up to 25 A) |
-| Geared wheel motors | 4 | 8.4 V through two motor driver boards, two motors each |
+| Geared wheel motors | 4 | 8.4 V through two TB6612FNG dual motor drivers, two motors each |
 | ESP32 | 1 | 5 V from an XL4015 buck converter |
 | 16-channel I2C servo driver (PCA9685) | 1 | addresses all 8 servos |
 | Li-ion battery pack | 1 | 8.4 V |
@@ -42,7 +42,7 @@ The 8.4 V pack feeds three separate paths, so the servos' current spikes never r
 
 1. **XL4015 buck converter → 5 V** for the ESP32 and the I2C servo driver.
 2. **600 W DC-DC converter → 6 V, up to 25 A** for the six 35 kg-cm servos.
-3. **Battery direct, 8.4 V** for the two 70 kg-cm servos and the two motor driver boards.
+3. **Battery direct, 8.4 V** for the two 70 kg-cm servos and the two TB6612FNG motor drivers.
 
 ## Gait firmware
 
